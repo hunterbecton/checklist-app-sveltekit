@@ -9,8 +9,8 @@
 	$: totalCount = $todos.length;
 	$: completeCount = $todos.filter((todo) => todo.complete).length;
 	$: progressCount = $todos.filter((todo) => !todo.complete).length;
-	$: completePercentage = Math.round((completeCount / totalCount) * 100) | 0;
-	$: progressPercentage = Math.round((progressCount / totalCount) * 100) | 0;
+	$: completePercentage = Math.round((completeCount / totalCount) * 100) || 0;
+	$: progressPercentage = Math.round((progressCount / totalCount) * 100) || 0;
 </script>
 
 <section class="mt-10">
