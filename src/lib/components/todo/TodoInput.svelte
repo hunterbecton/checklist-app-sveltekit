@@ -22,7 +22,7 @@
 			type="text"
 			placeholder="Enter a todo"
 			value={todo.text}
-			on:blur={(e) => editTodo(todo.id, e.target.value)}
+			on:input={(e) => editTodo(todo.id, e.target.value)}
 			class="ml-5 flex-1 text-ellipsis rounded-none border-x-0 border-t-0 border-b border-dashed border-b-gray-two bg-cream-four px-0 pb-1 text-base font-normal text-gray-three placeholder:text-gray-two focus:border-gray-three focus:outline-none focus:ring-0"
 		/>
 		<span
