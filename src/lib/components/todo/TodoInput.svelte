@@ -14,7 +14,7 @@
 			type="checkbox"
 			checked={todo.complete}
 			on:change={() => toggleComplete(todo.id)}
-			class="flex h-4 w-4 items-center justify-center rounded border border-gray-three bg-cream-four text-green-four focus:border-green-five focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-green-five data-[state=checked]:border-green-five data-[state=checked]:bg-green-five"
+			class="h-4 w-4 rounded border border-gray-three bg-cream-four text-green-four focus:border-green-five focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-green-five"
 		/>
 		<label for={`${todo.id}-text`} class="sr-only">Edit todo</label>
 		<input
@@ -36,6 +36,7 @@
 		type="button"
 		on:click={() => deleteTodo(todo.id)}
 	>
+		<span class="sr-only">Delete todo</span>
 		<svg
 			class="h-5 w-5 text-steel-three group-hover:text-gray-five"
 			width="32"
